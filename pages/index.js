@@ -17,8 +17,8 @@ export default function Auth() {
     axios.put(
       'https://api.chatengine.io/users/',
       {username, secret},
-      {headers: {'Private-key': ""}}
-      //{headers: {'Private-key': process.env.REACT_APP_CHATENG_SECRET}}
+      //{headers: {'Private-key': ""}}
+      {headers: {'Private-key': process.env.NEXT_PUBLIC_CHATENG_SECRET}}
     )
     .then(r => router.push ('/chats'))
   }
@@ -26,7 +26,7 @@ export default function Auth() {
     <div className="background">
       <div className="auth-container">
         <form className="auth-form" onSubmit={e => onSubmit(e)}>
-          <div className="auth-title">Next Chat</div>
+          <div className="auth-title">Multiverse Messenger</div>
           
           <div className="input-container">
             <input
