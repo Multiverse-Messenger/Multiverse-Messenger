@@ -1,3 +1,8 @@
 FROM node:16.15.0
-COPY . /nextjs-chat-tutorial-main
-WORKDIR /nextjs-chat-tutorial-main
+COPY . /multiverse-messenger
+WORKDIR /multiverse-messenger
+RUN npm install
+EXPOSE 3000
+CMD npm run win
+
+
